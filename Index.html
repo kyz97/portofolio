@@ -1,0 +1,156 @@
+<!doctype html>  
+<html lang="id">  
+<head>  
+  <meta charset="utf-8" />  
+  <meta name="viewport" content="width=device-width,initial-scale=1" />  
+  <title>Portofolio — kayz</title>  
+  <style>  
+    *{box-sizing:border-box;margin:0;padding:0}  
+    html,body{height:100%}  
+    body{  
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;  
+      background: #f7f7f7;  
+      background-image:url("pp.jpg");  
+      color:white;  
+      padding:28px;  
+      line-height:1.4;  
+    }  
+  
+    .wrap{max-width:900px;margin:0 auto}  
+  
+    header{  
+      display:flex;  
+      align-items:center;  
+      justify-content:space-between;  
+      margin-bottom:20px;  
+    }  
+    .brand{display:flex;align-items:center;gap:12px}  
+    .logo{  
+      width:56px;height:56px;border-radius:8px;background:#222;color:#fff;  
+      display:flex;align-items:center;justify-content:center;font-weight:700;  
+    }  
+    h1{font-size:20px}  
+    nav a{margin-left:12px;text-decoration:none;color:#1a73e8;font-weight:600;font-size:14px}  
+  
+    /* Hero sederhana */  
+    .hero{  
+      background:#fff;border:1px solid #e3e3e3;padding:18px;border-radius:8px;  
+      display:flex;gap:18px;align-items:center;margin-bottom:18px;  
+    }  
+    .hero .text{flex:1}  
+    .hero h2{font-size:22px;margin-bottom:6px}  
+    .hero p{color:#555;font-size:14px}  
+  
+    /* Proyek */  
+    .projects{margin:18px 0}  
+    .projects ul{list-style:none;display:grid;gap:10px}  
+    .project{  
+      background:#fff;border:1px solid #e7e7e7;padding:12px;border-radius:6px;  
+    }  
+    .project h3{font-size:16px;margin-bottom:4px}  
+    .project p{font-size:13px;color:#555}  
+  
+    /* About + Contact */  
+    .row{display:flex;gap:16px;margin-top:12px}  
+    .card{  
+      background:#fff;border:1px solid #e7e7e7;padding:14px;border-radius:6px;  
+    }  
+    .card.flex{flex:1}  
+  
+    form input, form textarea{  
+      width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;margin-top:8px;  
+      font-size:14px;  
+    }  
+    form button{  
+      margin-top:10px;padding:8px 12px;border:none;border-radius:6px;background:#1a73e8;color:#fff;  
+      cursor:pointer;font-weight:600;  
+    }  
+  
+    footer{margin-top:20px;text-align:center;color:#666;font-size:13px}  
+  
+    /* Responsive */  
+    @media (max-width:720px){  
+      .hero{flex-direction:column;align-items:flex-start}  
+      .row{flex-direction:column}  
+      nav{display:none}  
+    }  
+  </style>  
+</head>  
+<body>  
+    
+  <div class="wrap">  
+    <header>  
+      <div class="brand">  
+        <div class="logo">  
+          <img src="mimi.jpg" alt="Foto logo" width="56" height="56" style="border-radius:8px;object-fit:cover;">  
+        </div>  
+        <div>  
+          <h1>kayz</h1>  
+          <div style="color:#666;font-size:13px"> </div>  
+      </div>  
+      <nav>  
+        <a href="#projects">Proyek</a>  
+        <a href="#about">Tentang</a>  
+        <a href="#contact">Kontak</a>  
+      </nav>  
+    </header>  
+  
+    <section class="hero" aria-labelledby="intro">  
+      <div class="text">
+        <h2 id="intro"> About </h2>  
+        <p>Name : M.rizky Apriadi <br>  
+        Kelas : XI RPL  
+        <br>  
+        Status : Pelajar  
+        </p>  
+      </div>  
+      <div style="text-align:center;">  
+        </div>  
+      </div>  
+    </section>  
+  
+    <section id="projects" class="projects">  
+      <h2 style="font-size:18px;margin-bottom:10px">Proyek Terpilih</h2>  
+      <ul>  
+        <li class="project">  
+          <h3>Website Toko Sederhana</h3>  
+          <p>Situs e-commerce sederhana dengan fitur katalog dan keranjang belanja (contoh demo).</p>  
+        </li>  
+        <li class="project">  
+          <h3>Dashboard Admin</h3>  
+          <p>Panel admin untuk melihat ringkasan data dan laporan.</p>  
+        </li>  
+        <li class="project">  
+          <h3>Landing Page Produk</h3>  
+          <p>Landing page responsif yang fokus pada konversi dan performa.</p>  
+        </li>  
+      </ul>  
+    </section>  
+  
+    <div class="row">  
+      <aside class="card" id="about" style="width:260px;">  
+        <h3>Tentang Saya</h3>  
+        <p style="color:#555;font-size:14px">Saya bekerja dengan HTML, CSS, dan JavaScript. Saya menyukai kode yang bersih dan pengalaman pengguna yang sederhana.</p>  
+      </aside>  
+  
+      <div class="card flex" id="contact">  
+        <h3>Kontak</h3>  
+        <form action="#" onsubmit="alert('Terima kasih — formulir tidak dikirim (demo).'); return false;">  
+          <label style="font-size:13px;color:#444">Nama</label>  
+          <input type="text" placeholder="Nama Anda" required />  
+          <label style="font-size:13px;color:#444">Email</label>  
+          <input type="email" placeholder="email@contoh.com" required />  
+          <label style="font-size:13px;color:#444">Pesan</label>  
+          <textarea rows="4" placeholder="Tulis pesan..." required></textarea>  
+          <button type="submit">Kirim</button>  
+        </form>  
+      </div>  
+    </div>  
+  
+    <footer>  
+      © Nama Anda — Sederhana &amp; Minimal  
+    </footer>  
+  </div>  
+</body>  
+</html>  
+  
